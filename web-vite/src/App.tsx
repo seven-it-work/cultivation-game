@@ -1,15 +1,15 @@
 import React, {useState} from 'react'
 import './App.css'
-import {Link} from "react-router-dom";
-import Router from "./router/index";
+import {Route, Router, Routes, useRoutes} from "react-router-dom";
 import NavComponent from "./components/NavComponent";
-
+import {routes} from "./router/index";
 
 function App() {
+    const element = useRoutes(routes);
     return (
         <>
             <NavComponent/>
-            <Router/>
+            {element}
         </>
     )
 }
