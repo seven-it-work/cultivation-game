@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-function Home() {
+function PersonalInformation() {
     const [count, setCount] = useState(0)
     return (
         <>
-            <div>主页</div>
+            <div>个人信息</div>
         </>
     )
 }
 
-export default Home
+export default PersonalInformation
 
