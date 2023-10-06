@@ -1,3 +1,6 @@
-.mapTable table{
-border: black 1px solid;
+.mapTable td {
+    border: black 1px solid;
+}.mapTable td {
+    border: black 1px solid;
+     margin: 50px;
 }

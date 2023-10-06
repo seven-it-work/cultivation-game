@@ -16,29 +16,6 @@ const items: MenuProps['items'] = [
         key: '/mail',
         icon: <AppstoreOutlined/>,
     },
-    {
-        label: '个人信息',
-        key: 'SubMenu',
-        icon: <SettingOutlined/>,
-        children: [
-            {
-                label: '属性',
-                key: 'setting:1',
-            },
-            {
-                label: '背包',
-                key: 'setting:2',
-            },
-            {
-                label: '关系',
-                key: 'setting:2',
-            },
-            {
-                label: '宗门',
-                key: 'setting:2',
-            },
-        ],
-    },
 ];
 
 const NavComponent: React.FC = () => {
