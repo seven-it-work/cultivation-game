@@ -7,57 +7,37 @@ import {useNavigate} from "react-router-dom";
 // 进入router去定义与key相同的路由
 const items: MenuProps['items'] = [
     {
-        label: 'Navigation One',
+        label: '世界',
         key: '/',
         icon: <MailOutlined/>,
     },
     {
-        label: 'Navigation Two',
+        label: '地图',
         key: '/mail',
         icon: <AppstoreOutlined/>,
     },
     {
-        label: 'Navigation Three - Submenu',
+        label: '个人信息',
         key: 'SubMenu',
         icon: <SettingOutlined/>,
         children: [
             {
-                type: 'group',
-                label: 'Item 1',
-                children: [
-                    {
-                        label: 'Option 1',
-                        key: 'setting:1',
-                    },
-                    {
-                        label: 'Option 2',
-                        key: 'setting:2',
-                    },
-                ],
+                label: '属性',
+                key: 'setting:1',
             },
             {
-                type: 'group',
-                label: 'Item 2',
-                children: [
-                    {
-                        label: 'Option 3',
-                        key: 'setting:3',
-                    },
-                    {
-                        label: 'Option 4',
-                        key: 'setting:4',
-                    },
-                ],
+                label: '背包',
+                key: 'setting:2',
+            },
+            {
+                label: '关系',
+                key: 'setting:2',
+            },
+            {
+                label: '宗门',
+                key: 'setting:2',
             },
         ],
-    },
-    {
-        label: (
-            <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-                Navigation Four - Link
-            </a>
-        ),
-        key: 'alipay',
     },
 ];
 
