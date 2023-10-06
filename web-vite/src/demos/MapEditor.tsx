@@ -35,11 +35,16 @@ import {Button, InputNumber, Modal} from 'antd';
 
 const MapEditor: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isWired, setIsWired] = useState(false);
     const [mapXLen, setMapXLen] = useState(10);
     const [mapYLen, setMapYLen] = useState(10);
 
     const showModal = () => {
-        setIsModalOpen(true);
+        if (isWired){
+
+        } else {
+            setIsModalOpen(true);
+        }
     };
 
     const handleOk = () => {
@@ -55,6 +60,10 @@ const MapEditor: React.FC = () => {
     const onChangeY = (value: number) => {
         setMapYLen(value)
     };
+    const onConnection=()=>{
+        setIsModalOpen(false);
+        setIsWired(true);
+    }
 
     function getTable(x, y) {
         const trList = []
@@ -85,10 +94,8 @@ const MapEditor: React.FC = () => {
             <InputNumber min={1} max={100} defaultValue={10} onChange={onChangeX}/>
             <InputNumber min={1} max={100} defaultValue={10} onChange={onChangeY}/>
             {getTable(mapXLen, mapYLen)}
-            <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+            <Modal title="编辑节点" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+            {/*    连线，先显示出以当前节点为中心的中心节点，创建当前中心与周围的连线，并记录连线信息*/}
             </Modal>
         </>
     );

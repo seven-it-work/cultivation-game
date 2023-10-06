@@ -27,7 +27,7 @@ export default function JDemo01(props: any) {
             instance.connect({
                 source: "flowChart1",//图一的id
                 target: "flowChart2",//图二的id
-                endpoint: [  "Dot", { radius:3 } ], //端点的形状设置为空
+                endpoint: ["Dot", {radius: 3}], //端点的形状设置为空
                 connector: "Straight",
                 anchor: ["Right", "Left"],//连接端点的位置，起始节点的右侧和结束节点的左侧
             });
@@ -35,12 +35,22 @@ export default function JDemo01(props: any) {
             instance.connect({
                 source: "flowChart1",
                 target: "flowChart4",
-                endpoint: [  "Dot", { radius:3 } ], //端点的形状设置为空
+                endpoint: ["Dot", {radius: 3}], //端点的形状设置为空
                 connector: "Straight",
                 anchor: ["BottomRight", "TopLeft"],
             });
         }, 20);
     };
+    /**
+     * 连线对象有：
+     * sourceId:'',
+     * targetId:'',
+     * anchor:'',
+     * anchor 取值如下
+     TopLeft      Top      TopRight
+     Left        当前节点   Right
+     BottomLeft  Bottom   BottomRight
+     */
     useEffect(() => {
         init();
         window.addEventListener("resize", resize);
@@ -51,12 +61,12 @@ export default function JDemo01(props: any) {
     }, []);
 
     return (
-        <div >
+        <div>
             <table className={'mapTable'} cellSpacing={20}>
                 <tbody>
                 <tr>
                     <td id={'flowChart1'}>1</td>
-                    <td  id={'flowChart2'}>2</td>
+                    <td id={'flowChart2'}>2</td>
                 </tr>
                 <tr>
                     <td id={'flowChart3'}>3</td>
