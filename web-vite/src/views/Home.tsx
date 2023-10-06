@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Col, Row} from "antd";
 import "./mapTable.css"
 import JDemo01 from "../demos/JDemo01";
+import MapEditor from "../demos/MapEditor";
 
 function Home() {
     const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function Home() {
                 </Col>
                 <Col span={12}>
                     <JDemo01/>
+                    <MapEditor></MapEditor>
                 </Col>
             </Row>
         </>
